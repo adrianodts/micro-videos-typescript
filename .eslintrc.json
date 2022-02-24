@@ -1,0 +1,25 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2020": true,
+        "node": true,
+        "jest": true,
+        "jest/globals": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest"
+    ],
+    "rules": {
+        "semi": ["error", "always"],
+        "allowKeywords": false,
+        "dot-notation": ["warn", "always"]
+    }
+}
