@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "ts-node": "ts-node",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@swc/core": "^1.2.144",
+    "@swc/jest": "^0.2.17",
+    "@types/jest": "^27.4.0",
+    "@types/lodash": "^4.14.178",
     "@types/node": "^14.14.31",
+    "jest": "^27.5.1",
     "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   }
