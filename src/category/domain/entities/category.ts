@@ -1,16 +1,22 @@
 /* eslint-disable class-methods-use-this */
+import { UniqueEntityId } from "../../../common/domain/vo/unique-identity-id";
 export interface CategoryProperties {
-    name: string;
-    description?: string;
-    isActive?: boolean;
-    createdAt?: Date;
+  name: string;
+  description?: string;
+  isActive?: boolean;
+  createdAt?: Date;
 }
 
 export class Category implements CategoryProperties {
-  constructor(public readonly properties: CategoryProperties) {
+  public readonly id: UniqueEntityId;
+  constructor(
+    public readonly properties: CategoryProperties,
+    id?: UniqueEntityId
+  ) {
     if (!this.properties) {
-      throw new Error('Category is null or undefined!');
+      throw new Error("Category is null or undefined!");
     }
+    this.id = id || new UniqueEntityId();
     this.name = this.properties.name;
     this.description = this.properties.description;
     this.isActive = this.properties.isActive;
@@ -23,7 +29,7 @@ export class Category implements CategoryProperties {
 
   private set name(value: string) {
     if (value === null || value === undefined || value.trim().length === 0) {
-      throw new Error('Category name is required!');
+      throw new Error("Category name is required!");
     }
   }
 
