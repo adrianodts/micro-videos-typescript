@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import { UniqueEntityId } from "../../../common/domain/vo/unique-identity-id";
+import { UniqueEntityId } from "../../../common/domain/value-objects/unique-identity-id";
 export interface CategoryProperties {
   name: string;
   description?: string;
